@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{7912A94A-DF5C-4C91-A2F8-4B35C662FC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordUtils.Tests", "WordUtils.Tests\WordUtils.Tests.csproj", "{29B8B0D1-CBBE-4C08-AB90-5E06CFF845CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7912A94A-DF5C-4C91-A2F8-4B35C662FC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7912A94A-DF5C-4C91-A2F8-4B35C662FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7912A94A-DF5C-4C91-A2F8-4B35C662FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7912A94A-DF5C-4C91-A2F8-4B35C662FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B8B0D1-CBBE-4C08-AB90-5E06CFF845CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B8B0D1-CBBE-4C08-AB90-5E06CFF845CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B8B0D1-CBBE-4C08-AB90-5E06CFF845CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B8B0D1-CBBE-4C08-AB90-5E06CFF845CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

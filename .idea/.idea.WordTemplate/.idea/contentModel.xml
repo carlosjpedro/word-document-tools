@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Carlos\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\Carlos\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\Carlos\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\Carlos\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\Carlos\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\Carlos\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="C:\Users\Carlos\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Carlos\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WordTemplate.841511361.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Carlos\RiderProjects\WordTemplate" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SampleApp" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="SampleApp.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="SampleApp.csproj" t="IncludeRecursive" />
+        <e p="Utils" t="Include">
+          <e p="IWordDocumentFactory.cs" t="Include" />
+          <e p="WordDocument.cs" t="Include" />
+          <e p="WordDocumentFactory.cs" t="Include" />
+        </e>
+      </e>
+      <e p="WordTemplate.sln" t="IncludeFlat" />
+      <e p="WordUtils.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="WordUtils.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="resource" t="Include">
+          <e p="document.docx" t="Include" />
+          <e p="sample.txt" t="Include" />
+          <e p="template.dotx" t="Include" />
+        </e>
+        <e p="WordDocumentFactoryTests.cs" t="Include" />
+        <e p="WordDocumentTests.cs" t="Include" />
+        <e p="WordUtils.Tests.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
