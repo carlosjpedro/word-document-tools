@@ -3,27 +3,25 @@ using FluentAssertions;
 using SampleApp.Utils;
 using Xunit;
 
+using static WordUtils.Tests.DocumentPaths;
 namespace WordUtils.Tests
 {
     [Collection("Integration")]
     public class WordDocumentFactoryTests
     {
         private readonly IWordDocumentFactory _factory = new WordDocumentFactory();
-        private const string TemplateFile = "./resource/template.dotx";
-        private const string DocumentFile = "./resource/document.dotx";
-        private const string InvalidFilePath = "./resource/no.file";
-
+        
         [Fact]
         public void CanCreateDocumentFromStream()
         {
-            var document = _factory.CreateDocument(TemplateFile);
+            var document = _factory.CreateDocument(TemplateFilePath);
             document.Should().NotBeNull();
         }
 
         [Fact]
         public void When_FileNotFound_ThrowArgException()
         {
-            var exception = Assert.Throws<ArgumentException>(()=> _factory.CreateDocument(InvalidFilePath));
+            var exception = Assert.Throws<ArgumentException>(()=> _factory.CreateDocument(NotFoundFilePath));
             exception.Message.Should().Be("Template file not found (Parameter 'templateFile')");
         }
     }

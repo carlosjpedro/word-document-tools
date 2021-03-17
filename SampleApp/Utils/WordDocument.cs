@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.CustomProperties;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.VariantTypes;
@@ -11,6 +14,7 @@ namespace SampleApp.Utils
     public class WordDocument : IWordDocument, IDisposable
     {
         private readonly WordprocessingDocument _document;
+        private string _documentText;
 
         public WordDocument(string templateFile)
         {
@@ -19,7 +23,17 @@ namespace SampleApp.Utils
 
             try
             {
-                _document = WordprocessingDocument.CreateFromTemplate(templateFile);
+                _document = WordprocessingDocument.Open(templateFile, true);
+                using var reader = new StreamReader(_document.MainDocumentPart.GetStream());
+                _documentText = reader.ReadToEnd();
+            }
+            catch (InvalidDataException)
+            {
+                throw new ArgumentException("Provided file is not a word template.", templateFile);
+            }
+            catch (FileFormatException)
+            {
+                throw new ArgumentException("Provided file is not a word template.", templateFile);
             }
             catch (ArgumentException)
             {
@@ -27,28 +41,36 @@ namespace SampleApp.Utils
             }
         }
 
-        public void Dispose()
+
+        public WordDocument ReplaceValue(string initialValue, string newValue)
         {
-            _document.Dispose();
+            _documentText =   Regex.Replace(_documentText,initialValue ,newValue);
+            return this;
         }
 
-        public void SetField(string fieldName, string newValue)
+        public void UpdateDocument()
         {
+            using var writer = new StreamWriter(_document.MainDocumentPart.GetStream(FileMode.Create));
+            writer.Write(_documentText);
+        }
 
-            var field = _document.CustomFilePropertiesPart
-                .Properties
-                .Cast<CustomDocumentProperty>()
-                .FirstOrDefault(x => x.Name == fieldName);
+        public Stream GetDocumentStream()
+        {
+            var outStream = new MemoryStream();
+            _document.Clone(outStream);
+             return outStream;
+        }
 
-            var newProp = new CustomDocumentProperty();
-            newProp.VTBString = new VTBString(newValue);
-            newProp.FormatId = $"{{{Guid.NewGuid().ToString().ToUpper()}}}";
-            newProp.Name = field.Name;
-            field.Remove();
-            
-            _document.CustomFilePropertiesPart.Properties.AppendChild(newProp);
-            _document.CustomFilePropertiesPart.Properties.Save();
-            _document.SaveAs("Good.docx");
+        private void Dispose(bool disposing)
+        {
+            if (!disposing) return;
+            _document?.Dispose();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

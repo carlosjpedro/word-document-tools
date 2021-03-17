@@ -10,8 +10,8 @@
     <e p="C:\Users\Carlos\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" t="Include" />
     <e p="C:\Users\Carlos\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="C:\Users\Carlos\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Carlos\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WordTemplate.841511361.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Carlos\RiderProjects\WordTemplate" t="IncludeFlat">
+    <e p="C:\Users\Carlos\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WordTemplate.-2092915498.00" t="ExcludeRecursive" />
+    <e p="D:\RiderProjects\word-document-tools" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SampleApp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -33,6 +33,7 @@
       <e p="WordTemplate.sln" t="IncludeFlat" />
       <e p="WordUtils.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DocumentPaths.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="net5.0" t="Include">
@@ -43,7 +44,7 @@
         <e p="resource" t="Include">
           <e p="document.docx" t="Include" />
           <e p="sample.txt" t="Include" />
-          <e p="template.dotx" t="Include" />
+          <e p="template.docx" t="Include" />
         </e>
         <e p="WordDocumentFactoryTests.cs" t="Include" />
         <e p="WordDocumentTests.cs" t="Include" />
